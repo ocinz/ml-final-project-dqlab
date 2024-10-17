@@ -120,3 +120,5 @@ st.header("Choose a datapoint color")
 color = st.color_picker("Color", "#FF0000")
 st.divider()
 st.scatter_chart(st.session_state.df, x="x", y="y", color=color )
+
+"I made changes"
