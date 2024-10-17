@@ -19,15 +19,30 @@ pipeline {
             steps{
                 echo "Hello World"
                 echo "Build Stage"
-                echo "Author: ${EMAIL}"
+                echo "Email: ${EMAIL}"
             }
         }
         stage("Test"){
             steps{
                 echo "Hello World"
                 echo "Test Stage"
-                echo "Author: ${WEB}"
+                echo "Web: ${WEB}"
             }
         }
     }
+
+    post {
+    always {
+      echo "I will always say Hello again!"
+    }
+    success {
+      echo "Yay, success"
+    }
+    failure {
+      echo "Oh no, failure"
+    }
+    cleanup {
+      echo "Don't care success or error"
+    }
+  }
 }
