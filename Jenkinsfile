@@ -9,21 +9,21 @@ pipeline {
 
     stages{
         stage("Prepare"){
-            step{
+            steps{
                 echo( "Hello World")
                 echo( "Prepare Stage")
                 echo( "Author: ${AUTHOR} ")
             }
         }
         stage("Build"){
-            step{
+            steps{
                 echo "Hello World"
                 echo "Build Stage"
                 echo "Author: ${EMAIL}"
             }
         }
         stage("Test"){
-            step{
+            steps{
                 echo "Hello World"
                 echo "Test Stage"
                 echo "Author: ${WEB}"
