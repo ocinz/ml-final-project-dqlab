@@ -21,7 +21,7 @@ pipeline {
                 echo "Build Stage"
                 echo "Author: ${EMAIL}"
             }
-        }
+        }`
         stage("Test"){
             step{
                 echo "Hello World"
