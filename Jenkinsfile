@@ -7,6 +7,11 @@ pipeline {
         WEB = "https://ocinz.tech"
     }
 
+    options {
+      disableConcurrentBuilds()
+      timeout(time: 10, unit: 'MINUTES')
+    }
+
     stages{
         stage("Prepare"){
             steps{
