@@ -37,11 +37,6 @@ pipeline {
             }
         }
         stage("Parameter") {
-          agent {
-            node {
-              label "linux && java11"
-            }
-          }
           steps {
             echo "Hello ${params.NAME}"
             echo "You description is ${params.DESCRIPTION}"
