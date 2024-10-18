@@ -22,6 +22,7 @@ pipeline {
         }
         stage("Build"){
             steps{
+              sleep(time: 10, unit: 'SECONDS')
                 echo "Hello World"
                 echo "Build Stage"
                 echo "Email: ${EMAIL}"
